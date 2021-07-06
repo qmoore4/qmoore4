@@ -1,0 +1,152 @@
+@fontSize: 5px;
+@primary-color: lavender;
+@fontColor: dimGray;
+/**Variables: Are used to store information for future use, 
+while at the same time prevent you from repeating another value into your stylesheet.
+LESS: Uses the @ symbol to make something a variable.
+Up above You cant witness how variables are formed/stored within LESS ie:@fontsize, @fontColor, ect.**/
+
+
+.round_shadow_button {
+    display: block;
+    font-size: @fontSize * 3;
+    color: @fontColor;
+    box-shadow: 0 3px @fontSize @fontColor;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.column {
+    float: left;
+    margin-left: @fontSize * 4;
+    width: 33.33%;
+    padding: @fontSize;
+/**Mixins: Allow you to reuse properties of one name for another and include it's in it's property.
+LESS: Stores multiple values and can be reused in the code whenever necessary,
+through usages of class/id selectors. In this example, 
+despite @fontSize being used soley for font sizes.@fontSize is being used for the padding within the
+column, which is still 5px**/    
+    flex: 33.33%;
+    text-align: center; 
+}
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+.row {
+    display: flex;
+}
+  
+ul.breadcrumb {
+    padding: @fontSize * 4;
+/**Operators: Are used to save time when using variables for simple mathematics.
+LESS: provides support for some arithmetical operations like (+), minus (-), 
+multiplication (*) and division (/) and they can operate on any number, color or variable.
+In this example I use @fontsize which equals 5px. "@fontSize * 4" will give me a padding of 20px 
+**/
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: @fontSize * 3;
+}
+ul.breadcrumb li+li:before {
+    padding: @fontSize;
+    color: @fontColor;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: @fontColor;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    color: @primary-color;
+/**Functions: Manipulate colors/values within the stylesheet
+LESS: Maps JavaScript code with manipulation of values,
+and uses predefined functions to manipulate HTML elements aspects in the style sheet.
+A simple function showed takes the font color of the hover,
+and gives it a lavender color through the setting placed on @primary-color**/
+}
+.topnav {
+    overflow: hidden;
+    background-color: @primary-color;
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    float: left;
+    color: @fontColor;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: @fontSize * 3;
+  }
+  
+  .topnav a.icon {
+    float: right;
+  }
+  
+  .topnav a:hover {
+    background-color: @fontColor;
+    color: @primary-color;
+  }
+  
+  .active {
+    background-color: @primary-color;
+    color: @fontColor;
+  }
+  /*h1 styles*/
+header h1{
+	color: black;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	font-family: arial;
+	background-color: @primary-color;
+	padding-top: @fontSize + 14;
+}
+
+/*h2 styles*/
+section h2{
+	display: block;
+	margin-left: @fontSize * 4;
+	margin-right: auto;
+	text-align: left;
+	font-family: arial;
+	color: @primary-color;
+	padding-top: @fontSize + 14;
+}
+
+/*paragraph styles*/
+article p{
+	font-size:  @fontSize * 5;
+	text-align: left;
+	margin-left: @fontSize * 4;
+	color: @fontColor;
+}
+
+/*body styles*/
+body {
+	background-color: white;
+	border-style: solid;
+	color: @fontColor;
+	font-family: verdana;
+    font-size: @fontSize * 5;
+}
+
+/*Header Styles*/
+header{
+	border-style: solid;
+	border-color: @primary-color;
+}
+/*Footer Styles*/
+footer{
+	text-align: center;
+	padding-top: @fontSize * 7;
+	color: @fontColor;
+}
