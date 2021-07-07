@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="keywords" content="Node.JS, Ruby, LESS, SASS, Javascript, Client, Server">
+  <meta name="description" content="Information on Preprocessing, Stylesheets, Designs, Scrpting">
+  <title>CMST 386 - Project 3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdn.jsdelivr.net/npm/less@4.1.1" ></script>
+
+</head>
+
+<body>
+
+  <header>
+      <h1>Preprocessing</h1>
+  </header>
+  
+  <div class="topnav">
+    <div id="myLinks">
+      <a href="../index.html">Home</a>
+      <a href="project3.html">Project 3</a>
+    </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div> 
+ <nav>
+    <ul class="breadcrumb">
+        <li><a href="../index.html" rel="follow">Home</a></li>
+        <li><a href="project3.html" rel="follow">Project 3</a></li>
+        <li><a href="preprocessing.html" rel="follow">Preprocessing</a></li>
+      </ul> 
+ </nav>
+   <main>
+     <article>
+	   <section>
+	      <h2>Explain the ways to implement preprocessing </h2>
+		    <p>
+                Preprocessing can be done through either usages of SASS or LESS. 
+                Both scripting languages serve as a shortcut to enable easy maintence of CSS. 
+                LESS is processed in Node.JS, while SASS can be preprocessed in Node.JS too; but with additional applications such as Codekit or Chocolatey. 
+                This difference is important, because Node.JS is seen as a balance between client-sided and server-sided scripts within the operating system. 
+                Node.JS focuses mainly on returning server content to the client. 
+                This makes things super simple for LESS. 
+                Considering there being a time where SASS used to be done through RUBY, shows how heavy on the server side the processing was. 
+                Server-sided components usually don't have to be written in Javascript, this is because the server supports other languages. 
+                Having one avenue to complete a task in CSS, makes LESS more appealing.
+			</p>  
+	   </section>
+	     <h2>Define and describe the mechanisms used in either LESS or SASS:</h2>
+            <div class="row">
+                <div class="column">
+                <button onclick="document.getElementById('LESS').src='mixins.PNG'">Mixins</button>
+                <button onclick="document.getElementById('LESS').src='variables.PNG'">Variables</button>
+                <button onclick="document.getElementById('LESS').src='functions.PNG'">Functions</button>
+                <button onclick="document.getElementById('LESS').src='opereators.PNG'">Operators</button>
+            </div>
+            </div>	
+	 </article>
+   </main>
+   
+   <footer>
+     <p><i class="fa fa-file-image-o"></i><img id="LESS" src="less.PNG" alt="less" style="width:500px"/></p>
+   </footer>
+   
+</body>
+
+</html>

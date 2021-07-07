@@ -1,0 +1,162 @@
+/**Variables: Are used to store information for future use, 
+while at the same time prevent you from repeating another value into your stylesheet.
+LESS: Uses the @ symbol to make something a variable.
+Up above You cant witness how variables are formed/stored within LESS ie:@fontsize, @fontColor, ect.**/
+.round_shadow_button {
+  display: block;
+  font-size: 15px;
+  color: dimGray;
+  box-shadow: 0 3px 5px dimGray;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-image: linear-gradient(to right, lavender, white);
+  border-radius: 5%;
+}
+.column {
+  float: left;
+  margin-left: 20px;
+  width: 33.33%;
+  padding: 5px;
+  /**Mixins: Allow you to reuse properties of one name for another and include it's in it's property.
+LESS: Stores multiple values and can be reused in the code whenever necessary,
+through usages of class/id selectors. In this example, 
+despite @fontSize being used soley for font sizes.@fontSize is being used for the padding within the
+column, which is still 5px**/
+  flex: 33.33%;
+  text-align: center;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row {
+  display: flex;
+}
+ul.breadcrumb {
+  padding: 20px;
+  /**Operators: Are used to save time when using variables for simple mathematics.
+LESS: provides support for some arithmetical operations like (+), minus (-), 
+multiplication (*) and division (/) and they can operate on any number, color or variable.
+In this example I use @fontsize which equals 5px. "@fontSize * 4" will give me a padding of 20px 
+**/
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 15px;
+}
+ul.breadcrumb li + li:before {
+  padding: 5px;
+  color: dimGray;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: dimGray;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: lavender;
+  /**Functions: Manipulate colors/values within the stylesheet
+LESS: Maps JavaScript code with manipulation of values,
+and uses predefined functions to manipulate HTML elements aspects in the style sheet.
+A simple function showed takes the font color of the hover,
+and gives it a lavender color through the setting placed on @primary-color**/
+}
+.topnav {
+  overflow: hidden;
+  background-color: lavender;
+  position: relative;
+}
+.topnav #myLinks {
+  display: none;
+}
+.topnav a {
+  float: left;
+  color: dimGray;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.topnav a.icon {
+  float: right;
+}
+.topnav a:hover {
+  background-color: dimGray;
+  color: lavender;
+}
+.active {
+  background-color: lavender;
+  color: dimGray;
+}
+/*h1 styles*/
+header h1 {
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: arial;
+  background-color: lavender;
+  padding-top: 19px;
+}
+/*h2 styles*/
+section h2 {
+  display: block;
+  margin-left: 20px;
+  margin-right: auto;
+  text-align: left;
+  font-family: arial;
+  color: lavender;
+  padding-top: 19px;
+}
+/*paragraph styles*/
+article p {
+  font-size: 25px;
+  text-align: left;
+  margin-left: 20px;
+  color: dimGray;
+}
+/*body styles*/
+body {
+  background-color: white;
+  border-style: solid;
+  color: dimGray;
+  font-family: verdana;
+  font-size: 25px;
+}
+/*Header Styles*/
+header {
+  border-style: solid;
+  border-color: lavender;
+}
+/*Footer Styles*/
+footer {
+  text-align: center;
+  padding-top: 35px;
+  color: dimGray;
+}
+/*Listing styles*/
+ul{
+  list-style: none;
+}
+/*Media Query*/
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
