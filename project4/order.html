@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="keywords" content="Email, Serving, Message, Breakfast, Smoothies, Order, Name">
+  <meta name="description" content="Placing An Order Through Email Reservation">
+  <title>CMST 386 - Project 4</title>
+  <link rel="stylesheet" href="css/project4.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  <script src="https://kit.fontawesome.com/b4a1c0a500.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <header>
+      <h1>Berry Broz</h1>
+  </header>
+  
+  <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="smoothie.html">Smoothie</a>
+            <ul>
+               <li><a href="strawberries.html">Strawberry</a></li>
+               <li><a href="blackberries.html">Blackberry</a></li>
+               <li><a href="cranberries.html">Cranberry</a></li>
+               <li><a href="blueberries.html">Blueberry</a></li>
+            </ul>
+        </li>    
+        <li><a href="order.html">Order</a></li>
+        <li><a href="mission.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="location.html">Location</a></li>        
+      </ul>
+  </nav>
+   <main>
+     <article>
+	   <section>
+	      <h2>Place An Order</h2>
+		    <p>
+              Our smoothies are $1.00 for an 4oz serving.
+              To place an order please fill out your email,
+              and the number of smoothies you would like to order in the message box.
+              A fair warning to remember, operational hours are inbetween 6am to 7am. 
+              Any order that isn't submitted within that time frame, will not be considered.
+              Ordering ahead beyond these hours are unnacceptable as well. 
+              <i class="far fa-envelope"></i>
+			</p>  
+	       <p>
+            <h3>Information</h3>
+            <form action=”mailto:qmoore4@student.umgc.edu” 
+                  method=”POST” enctype=”multipart/form-data” name=”EmailForm”>
+                <label for="fname">Name: </label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="order">Order: </label>
+                <input type="text" id="order" name="order"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+	   </section>
+	 </article>
+   </main>
+   
+   <footer>
+     <p>&copy; 2021, Qadree Moore</p>
+     <p>https://app.termly.io/dashboard/website/c79d0012-b380-4827-a09c-da689935d33d/privacy-policy</p>
+     <p id="demo"></p>
+     <script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+     </script>
+   </footer>
+   
+</body>
+
+</html>
